@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KDZ"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        WindowStartupLocation="Manual" 
+    Left="75" Top="20"
+        Title="MainWindow" Height="650" Width="1050"
+       Icon = "C:\Users\hd523\Documents\Visual Studio 2015\Projects\KDZ\KDZ\ball.ico"
+        >
     <Grid>
-        
+
+        <Image x:Name="Stadium_png" HorizontalAlignment="Center" Margin="0,0,0,0" Source="sfg.jpg" Stretch="Fill" VerticalAlignment="Center"/>
+        <Image x:Name="Logo_jpg" Height="150" Width="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Source="GGuLc92Q72Y.jpg" Stretch="Fill" RenderTransformOrigin="-3.222,0.136"/>
+        <Button x:Name="buttonExit" Width="90" Height="35"  Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="90,0,0,50" Click="buttonExit_Click" Background="{x:Null}" FontSize="14" Foreground="#FFFAF2F2" FontFamily="Arial Rounded MT Bold"/>
+        <Button x:Name="buttonContinue" Width="90" Height="35" Content="Continue" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,90,50" Click="buttonContinue_Click" Background="{x:Null}" IsCancel="True" FontSize="14" Foreground="White" FontFamily="Arial Rounded MT Bold"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Height="99" Margin="14,285,0,0" TextWrapping="Wrap" Text="WELCOME TO OBOLEN FC TICKET OFFICE" VerticalAlignment="Top" Width="450" FontWeight="Bold" FontFamily="Arial Rounded MT Bold" RenderTransformOrigin="0.5,0.5" FontSize="20" FrameworkElement.FlowDirection="LeftToRight" FontStyle="Italic" TextDecorations="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Visible" Foreground="Snow">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="5" Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
     </Grid>
+
 </Window>

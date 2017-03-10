@@ -1,0 +1,35 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KDZ"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="KDZ.ConfirmData_Match"
+        mc:Ignorable="d"
+         WindowStartupLocation="Manual" 
+    Left="75" Top="20"
+        Title="ConfirmData_Match" Height="650" Width="1050">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="276*"/>
+        </Grid.ColumnDefinitions>
+        <Calendar Grid.Column="1" HorizontalAlignment="Left" Margin="35.333,12.5,0,0" VerticalAlignment="Top" Height="179" Width="200" Grid.Row="1"/>
+        <Button x:Name="buttonBack" Content="Return" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="71.333,407.5,0,0" Click="buttonBack_Click" Grid.Row="1"/>
+        <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="723.333,407.5,0,0" Click="buttonNext_Click" Grid.Row="1"/>
+        <DataGrid x:Name="dataGridMatch" Grid.Column="1" HorizontalAlignment="Left" Height="196" Margin="422.333,15.333,0,0" VerticalAlignment="Top" Width="504" SelectionChanged="dataGrid_SelectionChanged" AlternationCount="10" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="No" HeaderStringFormat="" MinWidth="50"/>
+                <DataGridTextColumn Header="Match" MinWidth="250"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Data" MinWidth="100"/>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Time" MinWidth="100"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
