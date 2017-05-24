@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KDZ"
         mc:Ignorable="d"
-        Title="Checkout" Height="300" Width="300">
-    <Grid>
+             WindowStartupLocation="Manual" 
+    Left="75" Top="20"
+    Icon = "C:\Users\hd523\Documents\Visual Studio 2015\Projects\KDZ\KDZ\ball.ico"
         
+        Title="Checkout" Height="650" Width="1050">
+    <Grid>
+        <Image x:Name="Stadium_png" HorizontalAlignment="Center" Margin="0,0,0,0" Source="sfg.jpg" Stretch="Fill" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Height="198" Margin="0,-30,0,0" Width="861" FontFamily="Arial Rounded MT Bold" FontSize="36" Foreground="#FFFBFBFB" TextAlignment="Center"><Run Text="Thank you for your order!"/><LineBreak/><Run Text="It will be a pleasure to see you again"/><LineBreak/><Run Text=""/><LineBreak/><LineBreak/><LineBreak/><LineBreak/></TextBlock>
+        <Button x:Name="button1" Content="Exit" Width="90" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="90,0,0,50" Background="{x:Null}" IsCancel="True" Foreground="White" FontFamily="Arial Rounded MT Bold" Click="button1_Click"/>
+        <Button x:Name="button" Content="Check" Width="90" Height="35" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,90,50"  Background="{x:Null}" IsCancel="True" FontSize="14" Foreground="White" FontFamily="Arial Rounded MT Bold" Click="button_Click_1"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="If you would like to check your seat's status you can press &quot;Check&quot;" VerticalAlignment="Bottom" Margin="0,0,40,65" FontSize="10" FontFamily="Arial Rounded MT Bold" Foreground="White" Height="52" Width="177" TextAlignment="Center"/>
     </Grid>
 </Window>

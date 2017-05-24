@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,27 +24,17 @@ namespace KDZ
         {
             InitializeComponent();
         }
-        //PersonalData _ps;
-        //public PersonalData Ps
-        //{
-        //    get
-        //    {
-        //        return _ps;
-        //    }
-        //}
-
-        //PersonalData _newPersonalData;
-
         private void buttonContinue_Click(object sender, RoutedEventArgs e)
         {
-            string x;
+            // Check user's information
+            int TelNo;
             if (string.IsNullOrWhiteSpace(textBoxName.Text))
             {
                 MessageBox.Show("Please enter your information correctly");
                 textBoxName.Focus();
                 return;
             }
-            if(string.IsNullOrWhiteSpace(textBoxLastName.Text))
+            if (string.IsNullOrWhiteSpace(textBoxLastName.Text))
             {
                 MessageBox.Show("Please enter your information correctly");
                 textBoxLastName.Focus();
@@ -55,19 +46,34 @@ namespace KDZ
                 textBoxEmail.Focus();
                 return;
             }
-            x = textBoxEmail.Text;
-            //if ()
-            //{
+            if (!int.TryParse(textBoxPhone2.Text, out TelNo))
 
-            //}
+            {
+                MessageBox.Show("Please fill in your telephone number correctly");
+                textBoxPhone2.Focus();
+                return;
+            }
+
+            if (TelNo < 1000000 || TelNo > 9999999)
+            {
+                MessageBox.Show("Your telephone number must contain 11 numbers in total ");
+                textBoxPhone2.Focus();
+                return;
+            }
+   
             BankCard window = new BankCard();
             window.Show();
             this.Close();
+
+            //Read information before saving
+            Global.FullName[Global.index][Global._seat]=textBoxName.Text+ textBoxLastName.Text;
+            Global.PhoneNumber[Global.index][Global._seat] = textBoxPhone.Text + textBoxPhone2.Text;
+            Global.Email[Global.index][Global._seat] = textBoxEmail.Text;
         }
 
         private void buttonBack_Click(object sender, RoutedEventArgs e)
         {
-            ConfirmData_Match window = new ConfirmData_Match();
+            Seats window = new Seats();
             window.Show();
             this.Close();
         }
@@ -76,5 +82,19 @@ namespace KDZ
         {
 
         }
+    
+
+        private void textBoxPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string x;
+            x = textBoxPhone.Text;
+            if (x.Length == 3)
+            {
+                textBoxPhone2.Focus();
+            }
+
+        }
+       
+   
     }
 }

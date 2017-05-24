@@ -23,5 +23,38 @@ namespace KDZ
         {
             InitializeComponent();
         }
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //Save all information
+            Global.A[Global.index][Global._seat] = 1;
+
+            FileText ft = new FileText();
+            ft.Filename = "...\\Match.txt";
+            ft.WriteData(Global.n, Global.A);
+
+            Save ft1 = new Save();
+            ft1.Filename = "...\\Data.txt";
+            ft1.WriteData(Global.index + 1, Global._seat, Global.FullName[Global.index][Global._seat], Global.PhoneNumber[Global.index][Global._seat], Global.Email[Global.index][Global._seat], Global.CCNumber[Global.index][Global._seat], Global.Expire[Global.index][Global._seat], Global.CVV[Global.index][Global._seat]);
+            // Open a window to check
+            Check window = new Check();
+            window.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            // Save all information
+            Global.A[Global.index][Global._seat] = 1;
+
+            FileText ft = new FileText();
+            ft.Filename = "...\\Match.txt";
+            ft.WriteData(Global.n, Global.A);
+
+            Save ft1 = new Save();
+            ft1.Filename = "...\\Data.txt";
+            ft1.WriteData(Global.index + 1, Global._seat, Global.FullName[Global.index][Global._seat], Global.PhoneNumber[Global.index][Global._seat], Global.Email[Global.index][Global._seat], Global.CCNumber[Global.index][Global._seat], Global.Expire[Global.index][Global._seat], Global.CVV[Global.index][Global._seat]);
+            //Exit
+            this.Close();
+        }
     }
 }

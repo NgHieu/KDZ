@@ -8,24 +8,34 @@
         mc:Ignorable="d"
          WindowStartupLocation="Manual" 
     Left="75" Top="20"
+    Icon = "C:\Users\hd523\Documents\Visual Studio 2015\Projects\KDZ\KDZ\ball.ico"
         Title="BankCard" Height="650" Width="1050">
     <Grid>
-        <ComboBox x:Name="comboBoxMonth" HorizontalAlignment="Left" Margin="216,145,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBoxMonth_SelectionChanged">
-            <System:Int16>1</System:Int16>
-            <System:Int16>2</System:Int16>
-            <System:Int16>3</System:Int16>
-            <System:Int16>4</System:Int16>
-            <System:Int16>6</System:Int16>
-            <System:Int16>7</System:Int16>
-            <System:Int16>8</System:Int16>
-            <System:Int16>9</System:Int16>
+
+        <Image x:Name="Stadium_png" HorizontalAlignment="Center" Margin="0,0,0,0" Source="sfg.jpg" Stretch="Fill" VerticalAlignment="Center"/>
+        <ComboBox x:Name="comboBoxMonth" HorizontalAlignment="Right" Margin="0,-56,625,0" VerticalAlignment="Center" Width="120" SelectionChanged="comboBoxMonth_SelectionChanged" Grid.ColumnSpan="2" FontWeight="Bold">
+            <System:Int16>01</System:Int16>
+            <System:Int16>02</System:Int16>
+            <System:Int16>03</System:Int16>
+            <System:Int16>04</System:Int16>
+            <System:Int16>05</System:Int16>
+            <System:Int16>06</System:Int16>
+            <System:Int16>07</System:Int16>
+            <System:Int16>08</System:Int16>
+            <System:Int16>09</System:Int16>
             <System:Int16>10</System:Int16>
 
             <System:Int16>11</System:Int16>
             <System:Int16>12</System:Int16>
 
         </ComboBox>
-        <ComboBox x:Name="comboBoxYear" HorizontalAlignment="Left" Margin="553,145,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="comboBoxYear" HorizontalAlignment="Right" Margin="0,-56,337,0" VerticalAlignment="Center" Width="120" BorderBrush="{x:Null}" FontWeight="Bold">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
             <System:Int16>17</System:Int16>
             <System:Int16>18</System:Int16>
             <System:Int16>19</System:Int16>
@@ -35,17 +45,22 @@
             <System:Int16>23</System:Int16>
             <System:Int16>24</System:Int16>
         </ComboBox>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="100,145,0,0" Text="Month:"/>
-        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="Year:" Margin="433,151,559.333,420.667"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="CVV:" VerticalAlignment="Top" Margin="119,233,0,0"/>
-        <TextBox x:Name="textBoxCVV" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="230,232,0,0"/>
-        <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="691,300,0,0" Click="buttonNext_Click"/>
-        <TextBox x:Name="textBoxCardNum"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Margin="197,70,0,0" TextChanged="textBoxCardNum_TextChanged" />
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,-30,500,0" Text="Month:" FontWeight="Bold" Height="48" Width="111"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Text="Year:" Margin="0,-30,-95,0" FontWeight="Bold" Height="48" Width="111"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="CVV:" VerticalAlignment="Center" Margin="0,77,574,0" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxCVV" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Margin="0,72,625,0" FontWeight="Bold"/>
+        <Button x:Name="buttonNext" Content="Next"  Width="90" Height="35" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,90,50" Click="buttonNext_Click" Background="{x:Null}" IsCancel="True" FontSize="14" Foreground="White" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name="textBoxCardNum"  HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="74"  Margin="0,-200,600,0" TextChanged="textBoxCardNum_TextChanged" FontWeight="Bold" />
 
-        <TextBox x:Name="textBoxCardNum2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Margin="294,70,0,0"/>
-        <TextBox x:Name="textBoxCardNum3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Margin="410,70,0,0"/>
-        <TextBox x:Name="textBoxCardNum4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Margin="520,70,0,0"/>
-        <Button x:Name="buttonBack" Content="Return" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="119,300,0,0" Click="buttonBack_Click"/>
+        <TextBox x:Name="textBoxCardNum2" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="74" Margin="0,-200,500,0" TextChanged="textBoxCardNum2_TextChanged" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxCardNum3" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="74" Margin="0,-200,400,0" TextChanged="textBoxCardNum3_TextChanged" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxCardNum4" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="74" Margin="0,-200,300,0" FontWeight="Bold" TextChanged="textBoxCardNum4_TextChanged_1"/>
+        <Button x:Name="buttonBack" Content="Return" Height="35" Width="90" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="90,0,0,50" Click="buttonBack_Click" Foreground="#FFF1F0F0" FontFamily="Arial Rounded MT Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Credit card's numbers:" VerticalAlignment="Center" Height="17" Width="150" Margin="0,-203,462,0" FontWeight="Bold"/>
 
     </Grid>
 </Window>

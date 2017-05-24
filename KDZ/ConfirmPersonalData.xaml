@@ -7,21 +7,30 @@
         mc:Ignorable="d"
         WindowStartupLocation="Manual" 
     Left="75" Top="20"
+        Icon = "C:\Users\hd523\Documents\Visual Studio 2015\Projects\KDZ\KDZ\ball.ico"
         Title="ConfirmPersonalData" Height="650" Width="1050">
     <Grid>
-        <Button x:Name="buttonContinue" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="buttonContinue_Click" Margin="823,286,0,0"/>
-        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120" Margin="162,29,0,0"/>
-        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="120" Margin="523,22,0,0"/>
-        <Button x:Name="buttonBack" Content="Return" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="143,286,0,0" Click="buttonBack_Click"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Text="First name:" Height="17" Width="112" Margin="19,30,0,0"/>
-        <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="Email:" Margin="76,160,916.333,423.667"/>
-        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Margin="360,27,549.333,555.667" Text="Last name:"/>
-        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="211,159,0,0" TextChanged="textBoxEmail_TextChanged"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="41,99,0,0" TextWrapping="Wrap" Text="Phone number:" VerticalAlignment="Top" Height="29" Width="158"/>
-        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56" Margin="143,98,0,0"/>
-        <TextBox x:Name="textBoxPhone3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Margin="374,99,0,0" 
-                 Text="" />
-        <TextBox x:Name="textBoxPhone2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="232,99,0,0"/>
+        <Image x:Name="Stadium_png" HorizontalAlignment="Center" Margin="0,0,0.333,-0.333" Source="sfg.jpg" Stretch="Fill" VerticalAlignment="Center"/>
+        <Button x:Name="buttonContinue" Content="Next" Height="35" Width="90" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,90,50" Click="buttonContinue_Click" Foreground="#FFFBFBFB" FontFamily="Arial Rounded MT Bold" FontSize="14">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="Name" VerticalAlignment="Center" Width="120" Margin="0,-200,600,0" Foreground="Black" FontWeight="Bold" Background="#FFFEFBFB"/>
+        <TextBox x:Name="textBoxLastName"  Height="23" TextWrapping="Wrap" Text="Last Name" HorizontalAlignment="Right" VerticalAlignment="Center" Width="120" Margin="0,-200,300,0" Foreground="Black" FontWeight="Bold" Background="#FFFBFBFB"/>
+        <Button x:Name="buttonBack" Content="Return"  Height="35" Width="90" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="90,0,0,50" Click="buttonBack_Click" Foreground="#FFF1F0F0" FontSize="14" FontFamily="Arial Rounded MT Bold">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Text="First name:" Height="17" Width="112" Margin="0,-203,500,0" Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock3" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Email:" Margin="0,77,574,0" Foreground="Black" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-205,470,0" Text="Last name:" Foreground="Black" FontWeight="Bold"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="abc@xyz.com" VerticalAlignment="Center" Width="278" Margin="0,77,440,0" TextChanged="textBoxEmail_TextChanged" Foreground="Black" FontWeight="Bold" Background="#FFFFFBFB"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,-30,500,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="48" Width="111" Foreground="Black" FontWeight="Bold"><Run Text="Phone number:"/><LineBreak/><Run Text="(ONLY RUS )"/></TextBlock>
+        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="999&#x9;" VerticalAlignment="Center" Width="56" Margin="0,-56,622,0" Foreground="Black" FontWeight="Bold" Background="White" TextChanged="textBoxPhone_TextChanged"/>
+        <TextBox x:Name="textBoxPhone2" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" Text="9999999" VerticalAlignment="Center" Width="120" Margin="0,-56,483,0" Foreground="Black" FontWeight="Bold" Background="#FFFBFBFB"/>
+        <Label x:Name="label" Content="+7" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-62,662,0" Height="23" Width="61" FontWeight="Bold"/>
 
     </Grid>
 </Window>

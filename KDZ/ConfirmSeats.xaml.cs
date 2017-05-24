@@ -17,11 +17,11 @@ namespace KDZ
     /// <summary>
     /// Interaction logic for ConfirmSeats.xaml
     /// </summary>
-    public partial class ConfirmSeats : Window
-    {
-        public ConfirmSeats()
-        {
-            InitializeComponent();
-        }
-    }
+    //public partial class ConfirmSeats : Window
+    //{
+    //    public ConfirmSeats()
+    //    {
+    //        InitializeComponent();
+    //    }
+    //}
 }
